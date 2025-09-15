@@ -12,12 +12,15 @@ Esta es una aplicación simple de contador creada con **React Native** y **Expo*
 - Interfaz moderna con fondo degradado.
 - Botones posicionados en las esquinas inferiores para fácil acceso.
 - Botón reutilizable (`CustomButton`) para mantener el código limpio y escalable.
+- Lógica del contador encapsulada en un hook personalizado (`useCounter`).
+- Componentes de UI separados para la visualización (`CounterDisplay`) y los controles (`CounterControls`).
+- Estilos modularizados en un archivo dedicado (`App.styles.ts`).
 - Iconos personalizados en la carpeta `assets`.
 
 
 ## Captura de pantalla
 
-![Counter App Screenshot](assets/screenshots/screenshot.png) -->
+![Counter App Screenshot](assets/screenshots/screenshot.png)
 
 ## Instalación y ejecución
 
@@ -39,7 +42,7 @@ Esta es una aplicación simple de contador creada con **React Native** y **Expo*
 
 4. Inicia la app:
    ```sh
-   npx expo start
+   npx expo start -c
    ```
 
 5. Escanea el código QR con la app **Expo Go** en tu dispositivo móvil o ejecuta en un emulador.
@@ -49,8 +52,13 @@ Esta es una aplicación simple de contador creada con **React Native** y **Expo*
 ```
 counter-app/
 ├── App.tsx
+├── App.styles.ts
+├── hooks/
+│   └── useCounter.ts
 ├── components/
-│   └── CustomButton.tsx
+│   ├── CustomButton.tsx
+│   ├── CounterDisplay.tsx
+│   └── CounterControls.tsx
 ├── assets/
 │   ├── adaptive-icon.png
 │   ├── favicon.png
@@ -67,3 +75,8 @@ Puedes modificar los colores, el diseño o agregar nuevas funcionalidades fácil
 ---
 
 ¡Disfruta programando y personalizando!
+
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](./LICENSE) para más detalles.
